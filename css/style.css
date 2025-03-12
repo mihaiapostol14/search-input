@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+body{
+    display: flex;
+    height: 100Vh;
+    justify-content: center;
+    align-items: center;
+    background: #13141F
+
+}
+.container{
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 20px 20px;
+    justify-content: space-evenly;
+    background: #252856;
+}
+
+.container .input-box{
+    width: 80%;
+    padding: 2%;
+    font-size: 16px;
+    border: 0;
+    background: none;
+    outline: none;
+}
+
+.container .input-box::placeholder{
+    text-transform: capitalize;
+    color: #fff;
+}
+
+
+.container .btn-submit{
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
