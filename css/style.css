@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100Vh;
+    justify-content: center;
+    align-items: center;
+    background: #13141F;
+}
+.container{
+    display: flex;
+}
+.container .input-box{
+    background: #252856;
+    padding: 20px;
+    border: 0;
+    font-size: large;
+}
+
+.input-box::placeholder{
+    text-transform: capitalize;
+}
+
+.container .btn-submit{
+    padding: 2%;
+    font-size: large;
+    justify-content: space-around;
+    background: #252856;
+    border: 0;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    color: #fff;
+}
