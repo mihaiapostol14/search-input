@@ -1,0 +1,102 @@
+/* ==========================================================================
+   1. Reset & Global Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #13141f;
+  --bg-search: #252856;
+  --text-primary: #ffffff;
+  --text-placeholder: rgba(255, 255, 255, 0.6); /* Better UX readability */
+  --border-radius: 6px;
+  --transition-speed: 0.2s ease;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   2. Search Component
+   ========================================================================== */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 16px; /* Optimized padding for a sleek search bar bar shape */
+  background-color: var(--bg-search);
+  border-radius: var(--border-radius);
+  /* Subtle focus-within treatment for great UX accessibility */
+  border: 2px solid transparent;
+  transition: border-color var(--transition-speed);
+}
+
+.search-container:focus-within {
+  border-color: #4f46e5; /* Highlights the whole bar when user clicks inside */
+}
+
+/* 3. Input Element */
+.search-input {
+  flex: 1; /* Automatically takes up all remaining space */
+  padding: 8px 4px;
+  font-size: 1rem; /* Using rem instead of px for better responsiveness */
+  color: var(--text-primary);
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.search-input::placeholder {
+  text-transform: capitalize;
+  color: var(--text-placeholder);
+}
+
+/* 4. Submit Button */
+.search-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.search-submit-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.search-submit-btn:active {
+  transform: scale(0.95);
+}
+
+/* ==========================================================================
+   5. Accessibility Utilities
+   ========================================================================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
