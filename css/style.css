@@ -2,39 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    color: #fff;
 }
+
 
 body{
     display: flex;
     height: 100Vh;
     justify-content: center;
     align-items: center;
-    background: #13141F;
+    background: #13141F
+
 }
 .container{
     display: flex;
-}
-.container .input-box{
-    background: #252856;
-    padding: 20px;
+    max-width: 300px;
+    width: 100%;
     border: 0;
-    font-size: large;
+    border-radius: 5px;
+    padding: 20px 20px;
+    justify-content: space-evenly;
+    background: #252856;
 }
 
-.input-box::placeholder{
-    text-transform: capitalize;
+.container .input-box{
+    width: 80%;
+    padding: 2%;
+    font-size: 16px;
+    border: 0;
+    background: none;
+    outline: none;
 }
+
+.container .input-box::placeholder{
+    text-transform: capitalize;
+    color: #fff;
+}
+
 
 .container .btn-submit{
-    padding: 2%;
-    font-size: large;
-    justify-content: space-around;
-    background: #252856;
     border: 0;
+    background: none;
+    outline: none;
     cursor: pointer;
-}
+    font-size: 16px;
 
-.fa-magnifying-glass{
-    color: #fff;
 }
